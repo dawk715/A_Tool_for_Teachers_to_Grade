@@ -10,7 +10,6 @@ Table of Contents
 2. Project Setup and Installation
 3. Usage Instructions
 4. Development Notes
-5. License
 
 =====================
 1. Features
@@ -31,19 +30,22 @@ Table of Contents
 
 ### Installation Steps
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/StudentGradingTool.git
+===================== 1. Clone the Repository:
+   git clone https://github.com/dawk715/A_Tool_for_Teachers_to_Grade.git﻿
 Set Up Database:
 Locate the university_grades.sql file within the project directory.
 Import this SQL file into your MySQL database. This will set up the database schema and initial tables.
 Update db_connection.php in the project files with your MySQL credentials.
-Configure Environment:
+
+===================== 2. Configure Environment:
 Copy all project files into the root directory of your web server (e.g., htdocs for XAMPP).
 Make sure the mysqli extension is enabled in PHP.
 Run the Application:
 Access the tool in your browser by visiting http://localhost/StudentGradingTool (or your configured local server URL).
-===================== 3. Usage Instructions
+
+=====================
+3. Usage Instructions
+=====================
 
 Teacher Instructions
 Login: Use your email and password on the teacher portal at the homepage.
@@ -51,17 +53,19 @@ Dashboard: After logging in, the teacher dashboard displays a list of students a
 View Grades: Click on a student's name to view their assignments and grades.
 Add/Update Grades: Enter grades for assignments directly in the tool and submit them as a batch for processing. Final grades are calculated based on configured assignment weights.
 Logout: To exit, click on the logout link.
+
+
 Student Instructions
 Login: Use your email and password on the student portal at the homepage.
 View Grades: Access a read-only view of all assignments and grades.
 Final Grade: The final grade is shown based on the weighted calculation of all entered grades.
-===================== 4. Development Notes
+
+=====================
+4. Development Notes
+=====================
 
 Password Hashing: This project uses SHA-256 hashing for demo purposes. In production, it's recommended to use PHP’s password_hash function for enhanced security.
 Database Structure: The StudentFinalGrades view provides an easy way to retrieve calculated final grades. This view should not be edited directly.
 Security: Sessions and access checks are included to ensure only logged-in teachers and students can view their respective dashboards.
-===================== 5. License
-
-This project is licensed under the MIT License.
 
 ===================== End of README
